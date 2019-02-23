@@ -1,0 +1,35 @@
+#!/bin/bash
+
+bi () {
+	brew install $*;
+	brew bundle dump --force --file=~/laptop/Brewfile
+}
+
+bci () {
+	brew cask install $*;
+	brew bundle dump --force --file=~/laptop/Brewfile
+}
+
+mi () {
+	mas install $*;
+	brew bundle dump --force --file=~/laptop/Brewfile
+}
+	
+bu () {
+	brew uninstall $*;
+	brew bundle dump --force --file=~/laptop/Brewfile
+}
+
+bcu () {
+	brew cask uninstall $*;
+	brew bundle dump --force --file=~/laptop/Brewfile
+}
+
+mu () {
+	mas uninstall $*;
+	brew bundle dump --force --file=~/laptop/Brewfile
+}
+
+function mkd() {
+  mkdir -p "$@" && cd "$_";
+}
