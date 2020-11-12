@@ -2,3 +2,4 @@
 
 alias cls='clear'
 alias code='code .'
+alias yarn='npx yarn'
