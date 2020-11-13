@@ -23,4 +23,3 @@ mas "Luminar 4", id: 1484647920
 mas "Numbers", id: 409203825
 mas "Save to Pocket", id: 1477385213
 mas "WhatsApp", id: 1147396723
-mas "Xcode", id: 497799835
