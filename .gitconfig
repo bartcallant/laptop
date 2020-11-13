@@ -1,2 +1,9 @@
 [includeIf "gitdir:~/Projects/"]
     path = .gitconfig-personal
+
+[core]
+	editor = code --wait --new-window
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --new-window --diff $LOCAL $REMOTE
