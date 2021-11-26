@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/bartcallant/.oh-my-zsh
+export ZSH=/Users/bart.callant/.oh-my-zsh
 
 ZSH_THEME="agnoster"
 
@@ -21,5 +21,4 @@ source $ZSH/oh-my-zsh.sh
 source ~/.aliases
 source ~/.functions
 
-export N_PREFIX=$HOME/.n
-export PATH=$N_PREFIX/bin:$PATH
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).

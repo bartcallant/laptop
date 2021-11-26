@@ -3,7 +3,7 @@
 ########## Variables
 dir=~/laptop                            # dotfiles directory
 olddir=~/dotfiles_old                   # old dotfiles backup directory
-files=".zshrc .aliases .functions .npmrc .gitconfig .gitconfig-personal .gitconfig-pridiktiv"      # list of files/folders to symlink in homedir
+files=".zshrc .aliases .functions .npmrc .gitconfig .gitconfig-personal .gitconfig-intocare"      # list of files/folders to symlink in homedir
 ##########
 
 echo "Started: Setting up dotfiles..."

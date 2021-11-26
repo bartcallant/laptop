@@ -1,10 +1,9 @@
 #!/bin/bash
 
 alias cls='clear'
-alias code='code .'
-alias yarn='npx yarn'
 alias ava='npx ava'
 alias pta='npm run pretest && ava -v'
 alias ptaw='pta --watch'
 alias tscw='npx -p typescript -c "tsc -p tsconfig.json --watch"'
 alias tscws='npx -p typescript -c "tsc -p tsconfig.spec.json --watch"'
+alias onoff='rm -rf node_modules && rm package-lock.json && npm install'

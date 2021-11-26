@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Started: Installing Homebrew..."
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo "Finished: Installing Homebrew"
 
 echo "Started: Installing everything from Brewfile..."
