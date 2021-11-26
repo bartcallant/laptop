@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/bart.callant/.oh-my-zsh
+export ZSH=/home/bartcallant/.oh-my-zsh
 
 ZSH_THEME="agnoster"
 
