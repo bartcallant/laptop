@@ -13,7 +13,6 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 plugins=(
   git
-  web-search
 )
 
 source $ZSH/oh-my-zsh.sh

@@ -14,12 +14,10 @@ cd ~/laptop
 sh Homebrew.sh
 sh oh-my-zsh.sh
 sh dotfiles.sh
-sh docker.sh
+sh n-install.sh
 sh osx.sh
 sh terminal.sh
 sh projects.sh
-
-# Set gitconfig
 
 # OS X Restart setting restore save state FALSE
 echo "Restarting system to make sure everything is set and loaded correctly..."

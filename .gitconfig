@@ -1,10 +1,8 @@
 [user]
     name = Bart Callant
 	email = bart@callant.net
-[includeIf "gitdir:~/Projects/"]
-    path = .gitconfig-personal
-[includeIf "gitdir:~/Projects/IntoCare/"]
-    path = .gitconfig-intocare
+[includeIf "gitdir:~/Projects/Work/"]
+    path = .gitconfig-work
 
 [core]
 	editor = code --wait --new-window
