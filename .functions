@@ -6,7 +6,7 @@ bi () {
 }
 
 bci () {
-	brew cask install $*;
+	brew install $* --cask;
 	brew bundle dump --force --file=~/laptop/Brewfile
 }
 
@@ -21,7 +21,7 @@ bu () {
 }
 
 bcu () {
-	brew cask uninstall $*;
+	brew uninstall $* --cask;
 	brew bundle dump --force --file=~/laptop/Brewfile
 }
 

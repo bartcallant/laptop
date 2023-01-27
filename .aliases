@@ -2,5 +2,5 @@
 
 alias cls='clear'
 alias code='code .'
-alias onoff='rm -rf node_modules && && npm install'
+alias onoff='rm -rf node_modules && npm install'
 alias onoffpl='rm -rf node_modules && rm package-lock.json && npm install'

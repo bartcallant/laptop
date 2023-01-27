@@ -1,12 +1,20 @@
 [user]
-    name = Bart Callant
+   	name = Bart Callant
 	email = bart@callant.net
+
 [includeIf "gitdir:~/Projects/Work/"]
-    path = .gitconfig-work
+   	path = .gitconfig-work
 
 [core]
 	editor = code --wait --new-window
 [diff]
-    tool = default-difftool
+   	tool = default-difftool
 [difftool "default-difftool"]
-    cmd = code --wait --new-window --diff $LOCAL $REMOTE
+   	cmd = code --wait --new-window --diff $LOCAL $REMOTE
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[push]
+	autoSetupRemote = true
