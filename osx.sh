@@ -3,7 +3,7 @@
 echo "Started: Setting up OS X..."
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
-osascript -e 'tell application "System Preferences" to quit'
+osascript -e 'tell application "System Settings" to quit'
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
@@ -70,9 +70,6 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
 # Set the icon size of Dock items to 36 pixels
 defaults write com.apple.dock tilesize -int 36
-
-# Disable Dashboard
-defaults write com.apple.dashboard mcx-disabled -bool true
 
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
