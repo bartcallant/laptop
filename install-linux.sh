@@ -8,9 +8,9 @@ cd ~/laptop
 
 echo "Started: Install"
 sudo sh linux/apt.sh
-sh linux/flatpak.sh
 echo "Finished: Install"
 
+sh homebrew.sh
 sh oh-my-zsh.sh
 sh dotfiles.sh
 sh n-install.sh

@@ -4,29 +4,9 @@ bi () {
 	brew install $*;
 	brew bundle dump --force --file=~/laptop/Brewfile
 }
-
-bci () {
-	brew install $* --cask;
-	brew bundle dump --force --file=~/laptop/Brewfile
-}
-
-mi () {
-	mas install $*;
-	brew bundle dump --force --file=~/laptop/Brewfile
-}
 	
 bu () {
 	brew uninstall $*;
-	brew bundle dump --force --file=~/laptop/Brewfile
-}
-
-bcu () {
-	brew uninstall $* --cask;
-	brew bundle dump --force --file=~/laptop/Brewfile
-}
-
-mu () {
-	mas uninstall $*;
 	brew bundle dump --force --file=~/laptop/Brewfile
 }
 
