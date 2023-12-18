@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Started: Setting up apt repositories..."
-sudo apt-get install wget gpg curl apt-transport-https
+sudo apt-get install wget gpg curl apt-transport-https zsh ca-certificates curl gnupg
 
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
@@ -20,6 +20,15 @@ curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --d
 
 curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 echo "Finished: Setting up apt repositories"
 
 echo "Started: Updating apt..."
@@ -27,5 +36,5 @@ sudo apt update
 echo "Finished: Updating apt"
 
 echo "Started: Installing packages from apt..."
-sudo apt install fonts-powerline brave-browser code slack-desktop 1password spotify-client
+sudo apt install fonts-powerline brave-browser code slack-desktop 1password spotify-client docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 echo "Finished: Installing packages from apt"

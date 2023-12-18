@@ -1,9 +1,12 @@
+[init]
+    defaultBranch = development
+
 [user]
    	name = Bart Callant
 	email = bart@callant.net
 
-[includeIf "gitdir:~/Projects/Work/"]
-   	path = .gitconfig-work
+[includeIf "hasconfig:remote.*.url:**github.com:*/**"]
+  path = "~/.gitconfig-github"
 
 [core]
 	editor = code --wait --new-window
@@ -18,3 +21,5 @@
 	smudge = git-lfs smudge -- %f
 [push]
 	autoSetupRemote = true
+[commit]
+	gpgsign = true
